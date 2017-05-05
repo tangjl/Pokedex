@@ -6,7 +6,7 @@
         <meta charset="UTF-8"/>
         <title>Pokedex</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
         <div class="row header">
@@ -14,12 +14,23 @@
                 <h1>Pokedex</h1>
             </div>
         </div>
+        <div class="row search-container">
+            search bar here
+        </div>
         <div class="row">
             {% for pokemon in pokemons %}
-            {{ pokemon.name }}
-                {{ pokemon.number }}
-                {{ pokemon.sprite.url }}
-                <img src="{{pokemon.sprite.url}}">
+            <div class="col-2">
+                <div class="card">
+                    <div class="title">
+                        {{ pokemon.name }}
+                        {{ pokemon.number }}
+                    </div>
+                    <img src="{{pokemon.sprite.url}}">
+                    <div class="bottom">
+                        More info
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </body>
