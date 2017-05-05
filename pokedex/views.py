@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Pokemon
+from .models import Pokemon, Stats
 
 def pokemon_list(request):
     pokemons = Pokemon.objects.order_by('number')

@@ -11,16 +11,18 @@ class Pokemon(models.Model):
     evolves_from = models.ForeignKey('self', related_name='ev_from', blank=True, null=True)
     region = models.ForeignKey('Region')
     type = models.ForeignKey('Type')
+    statistics = models.ForeignKey('Stats', null=True)
     climate_choices = (
-        ('GR', 'Grassy'),
-        ('MO', 'Mountain'),
-        ('BU', 'Building'),
-        ('SN', 'Snow'),
-        ('WA', 'Water'),
-        ('DE', 'Desert')    
+        ('Grassy', 'Grassy'),
+        ('Mountain', 'Mountain'),
+        ('Building', 'Building'),
+        ('Snow', 'Snow'),
+        ('Ocean', 'Ocean'),
+        ('Desert', 'Desert'),
+        ('Sky', 'Sky')    
     )
     climate = models.CharField(
-        max_length=2,
+        max_length=10,
         choices=climate_choices
     )
 

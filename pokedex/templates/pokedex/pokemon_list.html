@@ -1,37 +1,34 @@
-<!DOCTYPE html>
-{% load staticfiles %}
+{% extends 'pokedex/base.html' %}
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Pokedex</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    </head>
-    <body>
-        <div class="row header">
-            <div class="col-12">
-                <h1>Pokedex</h1>
-            </div>
-        </div>
-        <div class="row search-container">
-            search bar here
-        </div>
-        <div class="row">
-            {% for pokemon in pokemons %}
-            <div class="col-2">
-                <div class="card">
-                    <div class="title">
-                        {{ pokemon.name }}
-                        {{ pokemon.number }}
-                    </div>
-                    <img src="{{pokemon.sprite.url}}">
-                    <div class="bottom">
-                        More info
-                    </div>
+{% block content %}
+<div class="row search-container">
+    search bar here
+</div>
+<div class="row">
+    {% for pokemon in pokemons %}
+    <div class="col-2">
+        <div class="card">
+            <div class="front">
+                <div class="title">
+                    {{ pokemon.name|upper }}
+                </div>
+                <img src="{{pokemon.sprite.url}}">
+                <div class="bottom">
+                    {{ pokemon.type }}
+                    <span class="right">
+                        {{ pokemon.number|stringformat:"03d" }}
+                    </span>
                 </div>
             </div>
-            {% endfor %}
+            <div class="back">
+                <ul>
+                    <li>Evolves from: {{ pokemon.evolves_from }}</li>
+                    <li>Evolves into: {{ pokemon.evolves_into }}</li>
+                    <li>Region: {{ pokemon.region }}</li>
+                    <li>Habitat: {{ pokemon.climate }}</li> 
+            </div>
         </div>
-    </body>
-</html>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
