@@ -3,13 +3,9 @@
 {% block content %}
 <div class="row search-container">
     Filter: 
-    <form method="get">
-        {{ filter.form.as_p }}
-        <button type="submit">Search</button>
-        {% for pokemon in filter.qs %}
-            <li>{{ pokemon.name }}</li>
-        {% endfor %}
-  </form>
+    <form method="post" action="">
+        {{ formset }}
+    </form>
 </div>
 <div class="row">
     {% for pokemon in pokemons %}
