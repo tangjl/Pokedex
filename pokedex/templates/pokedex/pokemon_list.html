@@ -8,6 +8,7 @@
         <input type="submit" value="Search" />
     </form>
     <select name="regiontype" form="searchform" action="">
+        <option value=''></option>
         <option value="Kanto">Kanto</option>
         <option value="Johto">Johto</option>
         <option value="Hoenn">Hoenn</option>
@@ -16,6 +17,7 @@
         <option value="Kalos">Kalos</option>
     </select>
     <select name ="climatetype" form="searchform" action="">
+        <option value=''></option>
         <option value = "Grassy">Grassy</option>
         <option value = "Mountain">Mountain</option>
         <option value = "Ocean">Ocean</option>
@@ -24,6 +26,7 @@
         <option value = "Desert">Desert</option>
     </select>
     <select name="typetype" form="searchform" action="">
+        <option value=''></option>
         <option value = "NOR">Normal</option>
         <option value = "FIG">Fighting</option>
         <option value = "FLY">Flying</option>
@@ -42,6 +45,12 @@
         <option value = "DAR">Dark</option>
         <option value = "STE">Steel</option>
         <option value = "FAI">Fairy</option>
+    </select>
+    <select name="sorttype" form="searchform" action="">
+        <option value = "numberA">Number (Ascending)</option>
+        <option value = "numberD">Number (Descending)</option>
+        <option value = "nameA">Name (Ascending)</option>
+        <option value = "nameD">Name (Descending)</option>
     </select>
 </div>
 <div class="row">
