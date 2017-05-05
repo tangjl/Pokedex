@@ -13,8 +13,13 @@
         <div class="row header">
             <div class="col-12">
                 {% if user.is_authenticated %}
-                <div class="user">
-                    User: {{ user.username }}
+                <div class="user-container">
+                    <div class="user">
+                        User: {{ user.username }}
+                    </div>
+                    <div class="dropdown">
+                        <a class="link" href="{% url 'pokemon_collection' %}">Collection</a>
+                    </div>
                 </div>
                 {% endif %}
                 <h1>Pokédex</h1>

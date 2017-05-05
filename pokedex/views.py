@@ -13,3 +13,7 @@ def search(request):
     query = request.GET.get('q')
     pokemons = Pokemon.objects.filter(name=query)
     return render(request, 'pokedex/pokemon_list.html', {'pokemons': pokemons})
+
+def pokemon_collection(request):
+    pokemons = Pokemon.objects.order_by('-number')
+    return render(request, 'pokedex/pokemon_list.html', {'pokemons': pokemons})

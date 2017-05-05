@@ -54,14 +54,29 @@ h1 {
     width: 100%;
     margin-bottom: 15px;
 }
-.user {
+.link {
+    color: #000000;
+    text-decoration: none;
+}
+.user-container {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+.user {
     background-color: #000000;
     color: #FFFFFF;
     padding: 8px 15px;
     cursor: pointer;
+}
+.dropdown {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 8px 15px;
+    display: none;
+}
+.user-container:hover .dropdown {
+    display: block;
 }
 .search-container {
     background-color: #000000;
