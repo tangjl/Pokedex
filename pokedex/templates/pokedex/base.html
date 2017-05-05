@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+<!-- pip install pillow, multiselectfield -->
 
 <html lang="en">
     <head>
@@ -20,7 +21,7 @@
                         User: {{ user.username }}
                     </div>
                     <div class="dropdown">
-                        <a class="link" href="{% url 'pokemon_collection' %}">Collection</a>
+                        <a class="link" href="{% url 'pokemon_collection' username=user.username %}">Collection</a>
                     </div>
                 </div>
                 {% endif %}
