@@ -17,7 +17,7 @@ h1 {
 }
 .search-container {
     background-color: #000000;
-    padding: 10px;
+    padding: 20px 10px;
     margin-bottom: 20px;
     color: #FFFFFF;
     display: flex;
@@ -53,6 +53,7 @@ h1 {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
     transform: rotateY(-180deg);
     color: #FFFFFF;
+    padding: 10px;
 }
 .card:hover {
     transform: rotateY(-180deg);
@@ -63,7 +64,7 @@ h1 {
     bottom: 0;
     padding: 5px 10px;
     background-color: #000000;
-    width: 25%;
+    width: 50px;
     text-align: right;
     clip-path: polygon(25px 100px,500px 100px,500px 0px,0px 0px);
 }
@@ -91,14 +92,15 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 14px;
 }
 .stats {
     float: right;
 }
 footer {
     margin-top: 20px;
-    padding: 10px;
+    padding: 30px 10px;
+    text-align: center;
     background-color: #000000;
     color: #FFFFFF;
 }
@@ -117,7 +119,16 @@ footer {
     float: left;
     width: 100%;
 }
-@media all and (min-width: 675px) {
+@media all and (min-width: 350px) {
+    .col-2 {width: 50%;}
+}
+@media all and (min-width: 550px) {
+    .col-2 {width: 33.33%;}
+}
+@media all and (min-width: 725px) {
+    .col-2 {width: 25%;}
+}
+@media all and (min-width: 1060px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
