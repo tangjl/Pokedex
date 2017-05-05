@@ -28,9 +28,6 @@ body {
 .login-button:hover {
     transform: scale(1.2);
 }
-form {
-    margin-top: 25px;
-}
 .header {
     background-color: #DD092F;
     text-align: center;
@@ -51,6 +48,8 @@ h1 {
     font-size: inherit;
     padding: 10px 5px;
     border: none;
+    background-color: #F3F3F3;
+    border-radius: 15px;
     width: 100%;
     margin-bottom: 15px;
 }
@@ -83,13 +82,37 @@ h1 {
 .user-container:hover .dropdown {
     display: block;
 }
+.submit {
+    border: none;
+    background-color: #DD092F;
+    color: #FFFFFF;
+    padding: 3px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    font-family: 'Cabin', sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
+}
 .search-container {
     background-color: #000000;
     padding: 20px 10px;
     margin-bottom: 20px;
     color: #FFFFFF;
     display: flex;
+    font-size: 16px;
     justify-content: center;
+}
+.search-field {
+    padding: 3px;
+    font-family: 'Cabin', sans-serif;
+    border: none;
+    margin: 0 3px;
+}
+select {
+    height: 22px;
+    font-family: 'Cabin', sans-serif;
+    border: none;
+    margin: 0 3px;
 }
 .card {
     background-color:rgba(0, 0, 0, 0.05);

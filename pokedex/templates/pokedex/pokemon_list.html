@@ -2,56 +2,56 @@
 
 {% block content %}
 <div class="row search-container">
-    <label for="id_q">Filter</label>
-    <form method="get" action="/search/" id="searchform" class="pokemon-form">
-        <input type="text" name="q" id="id_q" value="{{ query }}"/>
-        <input type="submit" value="Search" />
+    <label for="id_q" style="margin-right: 10px; font-weight: 600;">Filter: </label>
+    <form method="get" action="/search/" id="searchform">
+        <input type="text" class="search-field" name="q" id="id_q" value="{{ query }}"/>
+            <select name="regiontype" form="searchform" action="">
+                <option value=''></option>
+                <option value="Kanto">Kanto</option>
+                <option value="Johto">Johto</option>
+                <option value="Hoenn">Hoenn</option>
+                <option value="Sinnoh">Sinnoh</option>
+                <option value="Unova">Unova</option>
+                <option value="Kalos">Kalos</option>
+            </select>
+            <select name ="climatetype" form="searchform" action="">
+                <option value=''></option>
+                <option value = "Grassy">Grassy</option>
+                <option value = "Mountain">Mountain</option>
+                <option value = "Ocean">Ocean</option>
+                <option value = "Snow">Snow</option>
+                <option value = "Building">Building</option>
+                <option value = "Desert">Desert</option>
+            </select>
+            <select name="typetype" form="searchform" action="">
+                <option value=''></option>
+                <option value = "NOR">Normal</option>
+                <option value = "FIG">Fighting</option>
+                <option value = "FLY">Flying</option>
+                <option value = "POI">Poison</option>
+                <option value = "GRO">Ground</option>
+                <option value = "ROC">Rock</option>
+                <option value = "BUG">Bug</option>
+                <option value = "GHO">Ghost</option>
+                <option value = "FIR">Fire</option>
+                <option value = "WAT">Water</option>
+                <option value = "GRA">Grass</option>
+                <option value = "ELE">Electric</option>
+                <option value = "PSY">Psychic</option>
+                <option value = "ICE">Ice</option>
+                <option value = "DRA">Dragon</option>
+                <option value = "DAR">Dark</option>
+                <option value = "STE">Steel</option>
+                <option value = "FAI">Fairy</option>
+            </select>
+            <select name="sorttype" form="searchform" action="">
+                <option value = "numberA">Number (Ascending)</option>
+                <option value = "numberD">Number (Descending)</option>
+                <option value = "nameA">Name (Ascending)</option>
+                <option value = "nameD">Name (Descending)</option>
+            </select>
+        <input type="submit" value="Search" class="submit"/>
     </form>
-    <select name="regiontype" form="searchform" action="">
-        <option value=''></option>
-        <option value="Kanto">Kanto</option>
-        <option value="Johto">Johto</option>
-        <option value="Hoenn">Hoenn</option>
-        <option value="Sinnoh">Sinnoh</option>
-        <option value="Unova">Unova</option>
-        <option value="Kalos">Kalos</option>
-    </select>
-    <select name ="climatetype" form="searchform" action="">
-        <option value=''></option>
-        <option value = "Grassy">Grassy</option>
-        <option value = "Mountain">Mountain</option>
-        <option value = "Ocean">Ocean</option>
-        <option value = "Snow">Snow</option>
-        <option value = "Building">Building</option>
-        <option value = "Desert">Desert</option>
-    </select>
-    <select name="typetype" form="searchform" action="">
-        <option value=''></option>
-        <option value = "NOR">Normal</option>
-        <option value = "FIG">Fighting</option>
-        <option value = "FLY">Flying</option>
-        <option value = "POI">Poison</option>
-        <option value = "GRO">Ground</option>
-        <option value = "ROC">Rock</option>
-        <option value = "BUG">Bug</option>
-        <option value = "GHO">Ghost</option>
-        <option value = "FIR">Fire</option>
-        <option value = "WAT">Water</option>
-        <option value = "GRA">Grass</option>
-        <option value = "ELE">Electric</option>
-        <option value = "PSY">Psychic</option>
-        <option value = "ICE">Ice</option>
-        <option value = "DRA">Dragon</option>
-        <option value = "DAR">Dark</option>
-        <option value = "STE">Steel</option>
-        <option value = "FAI">Fairy</option>
-    </select>
-    <select name="sorttype" form="searchform" action="">
-        <option value = "numberA">Number (Ascending)</option>
-        <option value = "numberD">Number (Descending)</option>
-        <option value = "nameA">Name (Ascending)</option>
-        <option value = "nameD">Name (Descending)</option>
-    </select>
 </div>
 <div class="row">
     {% for pokemon in pokemons %}
