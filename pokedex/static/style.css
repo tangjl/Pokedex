@@ -20,6 +20,8 @@ h1 {
     padding: 10px;
     margin-bottom: 20px;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 .card {
     background-color:rgba(0, 0, 0, 0.05);
@@ -89,6 +91,10 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-size: 15px;
+}
+.stats {
+    float: right;
 }
 footer {
     margin-top: 20px;

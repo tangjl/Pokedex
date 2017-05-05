@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.pokemon_list, name='pokemon_list'),
+    url(r'^search/$', views.search, name='search')
 ]

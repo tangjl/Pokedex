@@ -11,7 +11,7 @@ class Pokemon(models.Model):
     evolves_from = models.ForeignKey('self', related_name='ev_from', blank=True, null=True)
     region = models.ForeignKey('Region')
     type = models.ForeignKey('Type')
-    statistics = models.ForeignKey('Stats', null=True)
+    statistics = models.ForeignKey('Stats', null=True, related_name='statistics')
     climate_choices = (
         ('Grassy', 'Grassy'),
         ('Mountain', 'Mountain'),

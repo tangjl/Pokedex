@@ -2,7 +2,14 @@
 
 {% block content %}
 <div class="row search-container">
-    search bar here
+    Filter: 
+    <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit">Search</button>
+        {% for pokemon in filter.qs %}
+            <li>{{ pokemon.name }}</li>
+        {% endfor %}
+  </form>
 </div>
 <div class="row">
     {% for pokemon in pokemons %}
@@ -24,8 +31,19 @@
                 <ul>
                     <li>Evolves from: {{ pokemon.evolves_from }}</li>
                     <li>Evolves into: {{ pokemon.evolves_into }}</li>
+                    <br>    
                     <li>Region: {{ pokemon.region }}</li>
                     <li>Habitat: {{ pokemon.climate }}</li> 
+                    <br>
+                    Stats:
+                    <hr>
+                    <li>HP: <span class="stats">{{ pokemon.statistics.hp }}</span></li>
+                    <li>ATK: <span class="stats">{{ pokemon.statistics.attack }}</span></li>
+                    <li>DEF: <span class="stats">{{ pokemon.statistics.defense }}</span></li>
+                    <li>SPA: <span class="stats">{{ pokemon.statistics.special_attack }}</span></li>
+                    <li>SPD: <span class="stats">{{ pokemon.statistics.special_defense }}</span></li>
+                    <li>SPE: <span class="stats">{{ pokemon.statistics.speed }}</span></li>
+                </ul>
             </div>
         </div>
     </div>
