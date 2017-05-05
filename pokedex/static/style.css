@@ -23,6 +23,10 @@ body {
     display: block;
     border-radius: 10px;
     font-family: 'Cabin', sans-serif;
+    transition: 0.5s;
+}
+.login-button:hover {
+    transform: scale(1.2);
 }
 form {
     margin-top: 25px;
@@ -57,6 +61,7 @@ h1 {
     background-color: #000000;
     color: #FFFFFF;
     padding: 8px 15px;
+    cursor: pointer;
 }
 .search-container {
     background-color: #000000;
