@@ -7,3 +7,4 @@ db.sqlite3
 .DS_Store
 /mysite/__pycache__
 /pokedex/__pycache__
+/pokedex/migrations/__pycache__
