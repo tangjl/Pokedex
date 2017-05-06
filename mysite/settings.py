@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'pokedex.middleware.290.SqlPrintingMiddleware'
 ]
 
 ROOT_URLCONF = 'mysite.urls'
