@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row search-container">
-    <label for="id_q" style="margin-right: 10px; font-weight: 600;">Filter: </label>
+    <label for="id_q" class="filter">Filter: </label>
     <form method="get" action="/search/" id="searchform">
         <input type="text" class="search-field" name="q" id="id_q" value="{{ query }}"/>
             <select name="regiontype" form="searchform" action="">

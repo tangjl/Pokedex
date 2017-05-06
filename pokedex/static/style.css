@@ -59,13 +59,13 @@ h1 {
 }
 .home {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 5px;
+    left: 5px;
 }
 .user-container {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 5px;
+    right: 5px;
 }
 .user {
     background-color: #000000;
@@ -90,8 +90,8 @@ h1 {
     font-weight: 600;
     border-radius: 10px;
     font-family: 'Cabin', sans-serif;
-    margin-left: 10px;
     cursor: pointer;
+    margin-top: 5px; 
 }
 .search-container {
     background-color: #000000;
@@ -100,6 +100,11 @@ h1 {
     display: flex;
     font-size: 16px;
     justify-content: center;
+    align-items: center;
+}
+.filter {
+    margin-right: 10px; 
+    font-weight: 600;
 }
 .search-field {
     padding: 3px;
@@ -112,6 +117,7 @@ select {
     font-family: 'Cabin', sans-serif;
     border: none;
     margin: 0 3px;
+    margin-top: 5px;
 }
 .card {
     background-color:rgba(0, 0, 0, 0.05);
@@ -251,10 +257,14 @@ footer {
     .col-2 {width: 50%;}
 }
 @media all and (min-width: 550px) {
+    .user-container {top: 20px; right: 20px;}
+    .home {top: 20px; left: 20px;}
     .col-2 {width: 33.33%;}
 }
 @media all and (min-width: 725px) {
     .col-2 {width: 25%;}
+    select {margin-top: 0;}
+    .submit {margin-top: 0;}
 }
 @media all and (min-width: 1060px) {
     .col-1 {width: 8.33%;}
