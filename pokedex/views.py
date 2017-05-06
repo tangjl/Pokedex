@@ -95,11 +95,9 @@ def search(request):
 def pokemon_collection(request, username):
     user = get_object_or_404(User, username=request.user.username)
     trainer = get_object_or_404(Trainer, user=request.user)
-    pprint(trainer)
     pokemon_list = Pokemon_List.objects.filter(user=trainer).values_list('pokemon', flat=True)
     pokemon_group = []
     for pokemon in pokemon_list:
         pokemon_group.append(pokemon-5)
-        pprint(pokemon)
     pokemons = Pokemon.objects.filter(number__in=pokemon_group)
     return render(request, 'pokedex/pokemon_list.html', {'pokemons': pokemons})

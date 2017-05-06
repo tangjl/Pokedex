@@ -53,6 +53,23 @@
         <input type="submit" value="Search" class="submit"/>
     </form>
 </div>
+<form action="" method="post">
+    {% csrf_token %}
+    {% if user.is_authenticated and request.path == '/' %}
+    <div class="row">
+        <div class="button-container">
+            <input type="submit" value="Add" class="add"/>
+        </div>
+    </div>
+    {% elif user.is_authenticated %}
+    <div class="row">
+        <div class="button-container">
+            <input type="submit" value="Remove" class="add"/>
+        </div>
+    </div>
+    {% else %}
+    <br>
+    {% endif %}
 <div class="row">
     {% for pokemon in pokemons %}
     <div class="col-2">
@@ -88,7 +105,11 @@
                 </ul>
             </div>
         </div>
+        {% if user.is_authenticated %}
+        <input class="box" type="checkbox" name="choices" id="choices" value="{{pokemon.number}}">
+        {% endif %}
     </div>
     {% endfor %}
 </div>
+</form>
 {% endblock %}
