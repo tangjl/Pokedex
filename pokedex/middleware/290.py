@@ -1,3 +1,6 @@
+#Source: https://djangosnippets.org/snippets/290/
+#Edited to make compatabile with Django 1.10+
+
 from django.db import connection
 from django.conf import settings
 from django.utils.deprecation import MiddlewareMixin
